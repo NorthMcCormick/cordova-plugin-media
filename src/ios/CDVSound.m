@@ -312,6 +312,7 @@
                 }
             }
 
+            NSError* __autoreleasing err = nil;
             NSString* sessionCategory = AVAudioSessionCategoryAmbient;
 
             [self.avSession setCategory:sessionCategory error:&err];
