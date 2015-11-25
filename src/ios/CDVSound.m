@@ -312,8 +312,9 @@
                 }
             }
 
-            NSError *categoryError = nil;
-            [self.avSession setCategory: AVAudioSessionCategoryAmbient error: &categoryError];
+            [[self.avSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback 
+                                 withOptions:AVAudioSessionCategoryOptionMixWithOthers 
+                                       error:nil];
 
             if (!bError) {
                 NSLog(@"Playing audio sample '%@'", audioFile.resourcePath);
