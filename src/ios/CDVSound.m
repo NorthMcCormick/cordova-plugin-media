@@ -313,7 +313,7 @@
             }
 
             NSError *categoryError = nil;
-            [audioSession setCategory: AVAudioSessionCategoryAmbient error: &categoryError];
+            [self.avSession setCategory: AVAudioSessionCategoryAmbient error: &categoryError];
 
             if (!bError) {
                 NSLog(@"Playing audio sample '%@'", audioFile.resourcePath);
